@@ -2,9 +2,10 @@
     <div class="nav-container">
         <a href="/" class="nav-logo" title="Back to Homepage">Имя Фамилия</a>
         <div class="nav-links">
+            <!-- svelte-ignore missing-declaration -->
             {#if link.isShow}
                 <!-- объявление переменной link с помощью директивы let -->
-                {#each links as link}
+                {#each nav as link}
                     <a href={link.href} class="link">{link.title}</a>
                 {/each}
             {/if}
