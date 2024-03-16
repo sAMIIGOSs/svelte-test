@@ -1,6 +1,4 @@
-<script>
-    export let page;
-  </script>
+
 
 <svelte:head>
     <title>Блог</title>
@@ -13,7 +11,7 @@
             <h2>{page.title}</h2>
             <p>{page.body}</p>
             <p class="readmore">
-                <a class="link" href={'/blog/posts/${page.id}'}>
+                <a class="link" href={'/posts/${page.id}'}>
                     Читать далее
                 </a>
             </p>
@@ -23,3 +21,6 @@
 </div>
 
 
+<script>
+    import {routes} from './routes'
+</script>
