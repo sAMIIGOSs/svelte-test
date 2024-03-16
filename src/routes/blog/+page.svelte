@@ -9,7 +9,7 @@
             <h2>{page.title}</h2>
             <p>{page.body}</p>
             <p class="readmore">
-                <a class="link" href={'/blog/posts/1'}>
+                <a class="link" href={'/blog/posts/${page.id}'}>
                     Читать далее
                 </a>
             </p>
@@ -20,5 +20,5 @@
 
 
 <script>
-    import {routes} from './routes'
+    import {routes} from './routes.js'
 </script>
