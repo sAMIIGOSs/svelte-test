@@ -43,8 +43,8 @@
             title: 'temp',
             href: '/temp',
             isShow: false,
-        }
-    ]
+        },
+    ];
 </script>
 
 <style>
