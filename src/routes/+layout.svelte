@@ -2,9 +2,11 @@
     <div class="nav-container">
         <a href="/" class="nav-logo" title="Back to Homepage">Имя Фамилия</a>
         <div class="nav-links">
-            {#each nav as link}
+            <!-- svelte-ignore missing-declaration -->
+            {#if link.inShow}
+            <!-- svelte-ignore missing-declaration -->
             <a href={link.href} class="link">{link.title}</a>
-            {/each}
+            {/if}
         </div>
     </div>
 </nav>
@@ -18,23 +20,28 @@
     const nav = [
         {
             title: 'Обо мне',
-            href: '/about'
+            href: '/about',
+            isShow: true,
         },
         {
             title: 'Блог',
-            href: '/blog'
+            href: '/blog',
+            isShow: true,
         },
         {
             title: 'Портфолио',
-            href: '/project'
+            href: '/project',
+            isShow: true,
         },
         {
             title: 'Контакты',
-            href: '/contact'
+            href: '/contact',
+            isShow: true,
         },
         {
             title: 'temp',
-            href: '/temp'
+            href: '/temp',
+            isShow: false,
         }
     ]
 </script>
