@@ -1,3 +1,7 @@
+<script>
+    export let page;
+  </script>
+
 <svelte:head>
     <title>Блог</title>
 </svelte:head>
@@ -19,6 +23,3 @@
 </div>
 
 
-<script>
-    import {routes} from './routes';
-</script>
