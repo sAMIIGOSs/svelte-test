@@ -18,24 +18,6 @@
     </div>
 </div>
 
-<style>
-    .container {
-        margin: 50px auto;
-        max-width: 800px;
-        padding: 0 20px;
-    }
-
-    .blogposts{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 20px;
-    }
-
-    .link {
-        color: rgb(10, 10, 139);
-    }
-
-</style>
 
 <script>
     import {routes} from './routes'
