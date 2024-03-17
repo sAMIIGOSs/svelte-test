@@ -5,14 +5,36 @@
     </form>
     <div class="tobos">
         {#each todoList as item, index}
+        <div class="todo" class:completed={item.completed}>
             <span class="todo__text">{item.task}</span>
-        <div class="todo__buttons"></div>
+        <div class="todo__buttons">
+            <button class="complete" on:click={()=> complete(index)}>
+            <Icon name="check-mark" />
+            </button>
+            <button class="delete" on:click={() => remove(index)}>
+            <Icon name="delete" />
+            </button>
+        </div>
+        </div>
         {/each}
     </div>
 </main>
 <h1>My to-do list</h1>
 
 <script>
+
+import Icon from '../components/Icon.svelte';
+
+function remove(index){
+todoList.splice(index, 1);
+ todoList=todoList
+}
+
+function complete(index) {
+    todoListp[index].complete=!todoList[index].complete;
+}
+
+
     let newItem = "";
     let todoList = [];
     function add() {

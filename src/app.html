@@ -120,6 +120,35 @@
 		margin: 2em 0;
 	}
 
+	button {
+		background-color: transparent;
+		border: none;
+	}
+	button.delete,
+	button.delete:hover {
+		color: brown;
+		transition: color 100ms ease-out;
+	}
+	button.complete,
+	button.complete:hover {
+		color: cadetblue;
+		transition: color 100ms ease-out;
+	}
+	.todo.completed {
+		color: slategray;
+	}
+	.todo.completed.todo__text {
+		text-decoration: line-through;
+	}
+	.todo.completed button {
+		color: silver;
+	}
+	.tobos {
+		width: 100%;
+		max-width: 500px;
+	}
+
+
 		</style>
 		%sveltekit.head%
 	</head>
