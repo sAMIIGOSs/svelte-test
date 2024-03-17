@@ -3,7 +3,14 @@
         <input bind:value={newItem} placeholder="Enter to-do" />
         <button class="add-todo" on:click={add}><span>+</span></button>
     </form>
+    <div class="tobos">
+        {#each todoList as item, index}
+            <span class="todo__text">{item.task}</span>
+        <div class="todo__buttons"></div>
+        {/each}
+    </div>
 </main>
+<h1>My to-do list</h1>
 
 <script>
     let newItem = "";
