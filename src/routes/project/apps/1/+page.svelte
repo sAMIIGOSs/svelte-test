@@ -7,14 +7,14 @@
         {#each todoList as item, index}
         <div class="todo" class:completed={item.completed}>
             <span class="todo__text">{item.task}</span>
-        <div class="todo__buttons">
-            <button class="complete" on:click={()=> complete(index)}>
-            <Icon name="check-mark" />
-            </button>
-            <button class="delete" on:click={() => remove(index)}>
-            <Icon name="delete" />
-            </button>
-        </div>
+            <div class="todo__buttons">
+                <button class="complete" on:click={()=> complete(index)}>
+                    <Icon name="check-mark" />
+                </button>
+                    <button class="delete" on:click={() => remove(index)}>
+                    <Icon name="delete" />
+                    </button>
+            </div>
         </div>
         {/each}
     </div>
@@ -34,8 +34,8 @@ function add() {
         todoList = [
             ...todoList,
             {
-                задача: newItem,
-                завершено: false,
+                task: newItem,
+                completed: false,
             },
         ];
         newItem = "";
@@ -44,7 +44,6 @@ function add() {
 
     function remove(index) {
         todoList.splice(index, 1);
-        todoList = todoList;
     }
 
     function complete(index) {
