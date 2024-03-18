@@ -3,7 +3,7 @@
         <input bind:value={newItem} placeholder="Enter to-do" />
         <button class="add-todo" on:click={add}><span>+</span></button>
     </form>
-    <div class="tobos">
+    <div class="todos">
         {#each todoList as item, index}
         <div class="todo" class:completed={item.completed}>
             <span class="todo__text">{item.task}</span>
@@ -22,32 +22,37 @@
 <h1>My to-do list</h1>
 
 <script>
-    import {Icon} from '../../../../components/icon.svelte';
-    
-        let newItem = "";
-        let todoList = [];
-    
-        function add() {
-            if (newItem !== "") {
-                todoList = [
-                    ...todoList,
-                    {
-                        задача: newItem,
-                        завершено: false,
-                    },
-                ];
-                newItem = "";
-            }
-        }
-    
-        function remove(index) {
-            todoList = todoList.filter((item, i) => i !== index);
-        }
-    
-        function complete(index) {
-            todoList[index].завершено = !todoList[index].завершено;
-        }
-    </script>
+
+import {Icon} from '../../../../components/icon.svelte';
+
+
+let newItem ="";
+let todoList = [];
+
+function add() {
+    if(newItem !== "") {
+        todoList = [
+            ...todoList,
+            {
+                задача: newItem,
+                завершено: false,
+            },
+        ];
+        newItem = "";
+    }
+}
+
+    function remove(index) {
+        todoList.splice(index, 1);
+        todoList = todoList;
+    }
+
+    function complete(index) {
+        todoList[index].completed = !todoList[index].completed;
+    }
+
+
+</script>
 
 <style>
     main {
