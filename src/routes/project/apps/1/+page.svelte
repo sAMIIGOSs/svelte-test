@@ -22,34 +22,32 @@
 <h1>My to-do list</h1>
 
 <script>
-
-import {Icon} from '../../../../components/icon.svelte';
-
-function remove(index){
-todoList.splice(index, 1);
- todoList=todoList
-}
-
-function complete(index) {
-    todoList[index].complete=!todoList[index].complete;
-}
-
-
-    let newItem = "";
-    let todoList = [];
-    function add() {
-        if (newItem !== "") {
-            todoList = [
-                ...todoList,
-                {
-                    задача: newItem,
-                    завершено: false,
-                },
-            ];
-            newItem = "";
+    import {Icon} from '../../../../components/icon.svelte';
+    
+        let newItem = "";
+        let todoList = [];
+    
+        function add() {
+            if (newItem !== "") {
+                todoList = [
+                    ...todoList,
+                    {
+                        задача: newItem,
+                        завершено: false,
+                    },
+                ];
+                newItem = "";
+            }
         }
-    }
-</script>
+    
+        function remove(index) {
+            todoList = todoList.filter((item, i) => i !== index);
+        }
+    
+        function complete(index) {
+            todoList[index].завершено = !todoList[index].завершено;
+        }
+    </script>
 
 <style>
     main {
