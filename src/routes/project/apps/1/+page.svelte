@@ -31,7 +31,7 @@ todoList.splice(index, 1);
 }
 
 function complete(index) {
-    todoListp[index].complete=!todoList[index].complete;
+    todoList[index].complete=!todoList[index].complete;
 }
 
 
