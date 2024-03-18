@@ -23,7 +23,7 @@
 
 <script>
 
-import Icon from '../components/icon.svelte';
+import {Icon} from '../../../../components/icon.svelte';
 
 function remove(index){
 todoList.splice(index, 1);
