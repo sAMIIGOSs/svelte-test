@@ -23,7 +23,7 @@
 
 <script>
 
-import {Icon} from '../../../../components/icon.svelte';
+import {Icon} from '../../../../components/Icon.svelte';
 
 
 let newItem ="";
@@ -42,12 +42,14 @@ function add() {
     }
 }
 
-    function remove(index) {
+function remove(index) {
         todoList.splice(index, 1);
+        todoList = [...todoList]; 
     }
 
     function complete(index) {
         todoList[index].completed = !todoList[index].completed;
+        todoList = [...todoList]; 
     }
 
 
