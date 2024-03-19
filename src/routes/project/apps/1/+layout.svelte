@@ -1,6 +1,6 @@
 <div class="container">
-    <a href="/project">Домой</a>
-    <slot/>
+    <a href="/prject">Домой</a>
+    <slot />
 </div>
 
 <style>
