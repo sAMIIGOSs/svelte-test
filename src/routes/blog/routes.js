@@ -1,17 +1,12 @@
 export const routes = [
     {
         id: 1,
-        title:'My First Blog Post',
-        body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis dignissimos dolorem ea ex maiores minima minus nisi perspiciatis sapiente voluptate',
-
+        title: 'Мой первый пост в блоге',
+        body: 'Это мой самый первый пост в моем блоге, где я учусь использовать Svelte и Webpack',
     },
     {
-
-        "id": 2,
-        
-        "title": "My Second Blog Post",
-        
-        "body": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis dignissimos dolorem ea ex maiores minima minus nisi perspiciatis sapiente voluptate"
-        
+        id: 2,
+        title: 'Мой второй пост в блоге',
+        body: 'Это уже мой второй пост в моем блоге, где я учусь использовать Svelte и Webpack, хотя я просто код переписываю))',
     },
 ];

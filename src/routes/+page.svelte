@@ -1,5 +1,5 @@
 <svelte:head>
-    <title>Имя Фамилия</title>
+    <title>Данил Чижма</title>
 </svelte:head>
 
 <div class="container">
@@ -13,13 +13,10 @@
                     </h1>
                 </div>
                 <h2 class="subtitle">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis consequatur ipsam hic quas ipsum quibusdam aspernatur, dicta sint reprehenderit.
-                     Quos, placeat aliquid perspiciatis et excepturi doloribus? Ex earum porro sit!
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus consequuntur pariatur quisquam, laborum amet illo iusto nesciunt odit quibusdam quaerat, sapiente repudiandae ipsa nobis iure!
                 </h2>
-                <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
                 <div style="color:black" class="scroll-button animate-scroll" tabindex="0">
-                    <a href="/about">Click Here</a>
-                    <div class="arrow">→</div>
+                    <a href="/about">Click Here</a><div class="arrow">&#10145;</div>
                 </div>
             </div>
         </div>
@@ -74,22 +71,14 @@
         background-color: #ecebe8;
         width: 100%;
         height: 56vh;
-        margin: -205px;
+        margin: -235px auto;
     }
 
     .info .info-text {
         position: relative;
     }
 
-    .scroll-button {
-        display: flex;
-        border: none;
-        outline: none;
-        cursor: pointer;
-    }
-
     .scroll-button .arrow {
         margin-left: 0.50rem;
     }
-
 </style>

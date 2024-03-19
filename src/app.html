@@ -5,9 +5,11 @@
 		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Mukta:wght@400;700&family=Nova+Square&family=Nunito+Sans:wght@200;300;400&display=swap');
+			
 			body {
 				background-position: left top;
-				font-family: 'Inter', sans-serif;
+				font-family: "Inter", sans-serif;
 				margin: 0;
 				background-repeat: no-repeat;
 			}
@@ -31,124 +33,11 @@
 				padding-bottom: 2rem;
 			}
 
-			.nav .nav-container {
+			nav .nav-container {
 				display: flex;
 				justify-content: space-between;
 				align-items: center;
 			}
-
-			.nav-links {
-				display: flex;
-				justify-content: flex-end;
-				align-items: center;
-				margin: -1em 0;
-				flex: 1 0 auto;
-			}
-
-			.nav-links .link {
-				position: relative;
-				margin: 1em;
-				font-size: 0.85rem;
-				letter-spacing: 1px;
-				color: black;
-			}
-
-			
-			.container {
-        margin: 50px auto;
-        max-width: 800px;
-        padding: 0 20px;
-    }
-
-    .blogposts{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 20px;
-    }
-
-	.post {
-		border: 1px solid #ddd;
-		padding: 10px;
-		box-shadow: 0 0 10px #eee;
-	}
-
-    .link {
-        color: rgb(10, 10, 139);
-    }
-
-	.apps {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		grid-gap: 20px;
-	}
-
-	.app {
-		border: 1px solid #ddd;
-		padding: 10px;
-		box-shadow: 0 0 10px #eee;
-	}
-
-	.todo {
-		display: flex;
-		padding: 20px;
-		border-radius: 20px;
-		box-shadow: 0 0 15px rgb(0 0 0 / 20%);
-		background-color: hsla(0, 0%, 100%, 0.2);
-		margin-top: 1rem;
-		font-size: 1.2rem;
-		justify-content: space-between;
-		align-items: center;
-	}
-
-	.todo__buttons {
-		display: flex;
-		align-items: center;
-		margin-left: 1rem;
-	}
-
-	.todo button {
-		width: 32px;
-		height: 32px;
-		padding: 4px;
-		margin: 0;
-		flex-shrink: 0;
-	}
-
-	h1 {
-		text-align: center;
-		font-size: 1.5rem;
-		margin: 2em 0;
-	}
-
-	button {
-		background-color: transparent;
-		border: none;
-	}
-	button.delete,
-	button.delete:hover {
-		color: brown;
-		transition: color 100ms ease-out;
-	}
-	button.complete,
-	button.complete:hover {
-		color: cadetblue;
-		transition: color 100ms ease-out;
-	}
-	.todo.completed {
-		color: slategray;
-	}
-	.todo.completed.todo__text {
-		text-decoration: line-through;
-	}
-	.todo.completed button {
-		color: silver;
-	}
-	.tobos {
-		width: 100%;
-		max-width: 500px;
-	}
-
-
 		</style>
 		%sveltekit.head%
 	</head>
