@@ -1,55 +1,54 @@
 <script>
+    import Icon from '../../../../components/Icon.svelte';
 
-import {Icon} from '../../../../components/Icon.svelte';
+    let newItem = '';
+    let todoList = [];
 
-let newItem = '';
-let todoList = [];
-
-function add() {
-    if(newItem !== '') {
-        todoList = [
-            ...todoList,
-            {
-                task: newItem,
-                completed: false,
-            },
-        ];
-        newItem = '';
+    function add() {
+        if (newItem !== '') {
+            todoList = [
+                ...todoList,
+                {
+                    task: newItem,
+                    completed: false,
+                },
+            ];
+            newItem = '';
+        }
     }
-}
 
-function remove(index) {
+    function remove(index) {
         todoList.splice(index, 1);
-        todoList = [...todoList]; 
+        todoList = [...todoList]; // Создаем новый массив, чтобы обновить компонент
     }
 
     function complete(index) {
         todoList[index].completed = !todoList[index].completed;
-        todoList = [...todoList]; 
+        todoList = [...todoList]; // Создаем новый массив, чтобы обновить компонент
     }
-
-
 </script>
 
 <main>
     <h1>My to-do list</h1>
     <form on:submit|preventDefault={add}>
         <input bind:value={newItem} placeholder="Enter to-do" />
-        <button class="add-todo" on:click={add}><span>+</span></button>
+        <button class="add-todo" on:click={add}>
+            <Icon name="plus" />
+        </button>
     </form>
     <div class="todos">
         {#each todoList as item, index}
-        <div class="todo" class:completed={item.completed}>
-            <span class="todo__text">{item.task}</span>
-            <div class="todo__buttons">
-                <button class="complete" on:click={()=> complete(index)}>
-                    <Icon name="check-mark" />
-                </button>
-                    <button class="delete" on:click={() => remove(index)}>
-                    <Icon name="delete" />
+            <div class="todo" class:completed={item.completed}>
+                <span class="todo__text">{item.task}</span>
+                <div class="todo__buttons">
+                    <button class="complete" on:click={()=> complete(index)}>
+                        <Icon name="check" />
                     </button>
+                    <button class="delete" on:click={()=> remove(index)}>
+                        <Icon name="delete" />
+                    </button>
+                </div>
             </div>
-        </div>
         {/each}
     </div>
 </main>
