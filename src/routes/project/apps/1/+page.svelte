@@ -1,14 +1,12 @@
-
 <script>
 
 import {Icon} from '../../../../components/Icon.svelte';
 
-
-let newItem ="";
+let newItem = '';
 let todoList = [];
 
 function add() {
-    if(newItem !== "") {
+    if(newItem !== '') {
         todoList = [
             ...todoList,
             {
@@ -16,7 +14,7 @@ function add() {
                 completed: false,
             },
         ];
-        newItem = "";
+        newItem = '';
     }
 }
 
